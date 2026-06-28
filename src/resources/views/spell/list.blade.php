@@ -8,6 +8,7 @@
     <table class="table table-sm table-hover table-striped">
         <thead class="thead-light">
             <tr>
+                <th></th>
                 <th>ID</th>
                 <th>Class</th>
                 <th>Name</th>
@@ -26,6 +27,7 @@
             @foreach($items as $spell)
 
                 <tr>
+                    <td><img src="/images/{{ $spell->image }}"></td>
                     <td>{{ $spell->id }}</td>
                     <td>{{ $spell->player_class->name }}</td>
                     <td>{{ $spell->name }}</td>
