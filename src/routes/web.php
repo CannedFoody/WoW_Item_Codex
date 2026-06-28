@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlayerClassController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SpellController;
+use App\Http\Controllers\DataController;
 use Illuminate\Support\Facades\Route;
 
 Route::get("/", [HomeController::class, "index"]);
@@ -24,3 +25,7 @@ Route::post("/spells/put", [SpellController::class, "put"]);
 Route::get("/spells/update/{spell}", [SpellController::class, "update"]);
 Route::post("/spells/patch/{spell}", [SpellController::class, "patch"]);
 Route::post("/spells/delete/{spell}", [SpellController::class, "delete"]);
+
+Route::get('/data/get-top-spells', [DataController::class, 'get_top_spells']);
+Route::get('/data/get-spell/{spell}', [DataController::class, 'get_spell']);
+Route::get('/data/get-related-spells/{spells}', [DataController::class,'get_related_spells']);
