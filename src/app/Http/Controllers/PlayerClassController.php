@@ -6,9 +6,16 @@ use Illuminate\Http\Request;
 use App\Models\PlayerClass;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Controllers\HasMiddleware;
 
-class PlayerClassController extends Controller
+class PlayerClassController extends Controller implements HasMiddleware
 {
+    public static function middleware(): array{
+        return [
+            "auth",
+        ];
+    }
+
     public function list(): View {
         $items = PlayerClass::orderBy("name", "asc")->get();
 
