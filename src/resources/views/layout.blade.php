@@ -10,14 +10,12 @@
         integrity=" sha384 - sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB " crossorigin="anonymous">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-md bg-primary mb-3" data-bs-theme="dark">
+<body style="background-image: url('/images/site_images/Lion\'s_Pride_Inn_interior.jpg')">
+    <nav class="navbar navbar-expand-md bg-warning mb-3" data-bs-theme="dark">
         <div class="container">
-            <span class="navbar-brand mb-0 h1">Wow Classic Class Codex</span>
+            <span class="navbar-brand mb-0 h1"><img src="/images/site_images/WoW-Classic-Spell-Index-6-29-2026.png" alt="Website title image."></span>
 
-            <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -25,28 +23,28 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="/" style="color: black;">Home</a>
                     </li>
 
                     @if(Auth::check())
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/classes">Classes</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/classes" style="color: black;">Classes</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/spells">Spells</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/spells" style="color: black;">Spells</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/logout">Logout</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout" style="color: black;">Logout</a>
+                        </li>
 
                     @else
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">Login</a>
-                    </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login" style="color: black;">Login</a>
+                        </li>
 
                     @endif
                 </ul>
@@ -62,10 +60,10 @@
         </div>
     </main>
 
-    <footer class="text-bg-primary mt-3">
+    <footer class="text-bg-warning mt-3">
         <div class="container">
             <div class="row py-5">
-                <div class="col">
+                <div class="col" style="color: black; font-size: 1.5rem;">
                     G. Vistins, 2026
                 </div>
             </div>

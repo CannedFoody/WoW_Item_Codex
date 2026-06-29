@@ -1,8 +1,8 @@
-@extends ("layout");
+@extends ("layout")
 
 @section("content")
 
-<h1>{{ $title }}</h1>
+<h1 style="color: yellow;">{{ $title }}</h1>
 
 @if(count($items) > 0)
     <table class="table table-sm table-hover table-striped">
@@ -27,7 +27,7 @@
             @foreach($items as $spell)
 
                 <tr>
-                    <td><img src="/images/{{ $spell->image }}"></td>
+                    <td><img src="/images/uploads/{{ $spell->image }}"></td>
                     <td>{{ $spell->id }}</td>
                     <td>{{ $spell->player_class->name }}</td>
                     <td>{{ $spell->name }}</td>
